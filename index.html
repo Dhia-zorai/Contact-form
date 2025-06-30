@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="submit-successful" aria-live="polite">
+        <div class="title-icon">
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          <h1>Message Sent!</h1>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+      <form action="" novalidate>
+        <legend>Contact Us</legend>
+        <div class="full-name">
+          <div>
+            <label for="name">First Name</label>
+            <input
+              type="text"
+              class="name"
+              name="name"
+              required
+              aria-required="true"
+              aria-describedby="name-required"
+              aria-invalid="false"
+            />
+            <span id="name-required" class="name-required" role="alert"
+              >This field is required</span
+            >
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              class="last-name"
+              name="last-name"
+              required
+              aria-required="true"
+              aria-describedby="last-name-required"
+              aria-invalid="false"
+            />
+            <span
+              id="last-name-required"
+              class="last-name-required"
+              role="alert"
+              >This field is required</span
+            >
+          </div>
+        </div>
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="email"
+          name="email"
+          required
+          autocomplete="email"
+          aria-required="true"
+          aria-describedby="email-error email-required"
+          aria-invalid="false"
+        />
+        <span id="email-error" class="email-error" role="alert"
+          >Please enter a valid email address</span
+        >
+        <span id="email-required" class="email-required" role="alert"
+          >This field is required</span
+        >
+        <div
+          class="radio-group"
+          role="radiogroup"
+          aria-labelledby="query-type-label"
+        >
+          <label id="query-type-label">Query Type</label>
+          <div class="radio-options">
+            <div class="radio-outline">
+              <input
+                type="radio"
+                id="general"
+                name="query-type"
+                required
+                aria-required="true"
+                aria-describedby="radio-required"
+              />
+              <label for="general">General Enquiry</label>
+            </div>
+            <div class="radio-outline">
+              <input
+                type="radio"
+                id="support"
+                name="query-type"
+                required
+                aria-required="true"
+                aria-describedby="radio-required"
+              />
+              <label for="support">Support Request</label>
+            </div>
+          </div>
+          <span id="radio-required" class="radio-required" role="alert"
+            >Please select a query type</span
+          >
+        </div>
+
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          class="message"
+          id="message"
+          required
+          aria-required="true"
+          aria-describedby="message-required"
+          aria-invalid="false"
+        ></textarea>
+        <span id="message-required" class="message-required" role="alert"
+          >This field is required
+        </span>
+        <div class="check-box">
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="checkbox"
+            id="checkbox"
+            required
+            aria-required="true"
+            aria-describedby="checkbox-required"
+          />
+          <label for="checkbox"
+            >I hereby consent to being contacted by the team
+          </label>
+        </div>
+        <span id="checkbox-required" class="checkbox-required" role="alert"
+          >To submit this form, please consent to being contacted</span
+        >
+        <button>Submit</button>
+      </form>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
