@@ -9,6 +9,9 @@ function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
+function isAlpha(str) {
+  return /^[\p{L}]+$/u.test(str.trim());
+}
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -19,7 +22,7 @@ form.addEventListener("submit", (e) => {
     .querySelectorAll(".active")
     .forEach((el) => el.classList.remove("active"));
   let hasError = false;
-  if (!name.value || !isNaN(name.value)) {
+  if (!name.value || !isAlpha(name.value)) {
     const name_required = form.querySelector(".name-required");
     name_required.classList.add("active");
     name.setAttribute("aria-invalid", "true");
@@ -27,7 +30,7 @@ form.addEventListener("submit", (e) => {
   } else {
     name.setAttribute("aria-invalid", "false");
   }
-  if (!last_name.value || !isNaN(last_name.value)) {
+  if (!last_name.value || !isAlpha(last_name.value)) {
     const last_name_required = form.querySelector(".last-name-required");
     last_name_required.classList.add("active");
     last_name.setAttribute("aria-invalid", "true");

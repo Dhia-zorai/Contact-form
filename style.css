@@ -42,6 +42,7 @@ body {
   margin: 0;
   flex-direction: column;
   background-color: var(--Green-200--lighter);
+  min-height: 100dvh;
 }
 .form-container {
   margin: 3rem auto;
